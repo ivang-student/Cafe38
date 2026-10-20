@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cafe 38 &amp; Noori Chicken | Korean food in Orem, Utah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pot:#2a2220; --pot2:#3a302c; --rice:#f6f1e7; --yolk:#f2b134; --gochu:#c2372b;
+  --bg:#e9efe7; --ink:#1f2a24; --muted:#4d5a52; --card:#f7faf5; --line:#c5d2c4;
+  --display:"Black Han Sans","Apple SD Gothic Neo","Malgun Gothic",Impact,sans-serif;
+  --body:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171c19;--ink:#eef3ec;--muted:#a9b6ac;--card:#1f2622;--line:#34403a}}
+:root[data-theme="dark"]{--bg:#171c19;--ink:#eef3ec;--muted:#a9b6ac;--card:#1f2622;--line:#34403a}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yolk);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0}
+
+/* hero */
+.hero{background:var(--pot);color:var(--rice);position:relative;overflow:hidden}
+.hero .han{position:absolute;right:-10px;bottom:-40px;font-family:var(--display);font-size:clamp(160px,32vw,340px);color:var(--pot2);line-height:1;pointer-events:none;user-select:none}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;position:relative;z-index:2}
+nav b{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.02em}
+nav div{display:flex;gap:20px;font-size:16px}
+nav a{text-decoration:none;opacity:.85}nav a:hover{opacity:1;text-decoration:underline}
+.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:24px 0 72px;position:relative;z-index:2}
+h1{font-size:clamp(44px,8vw,92px)}
+.lede{max-width:34ch;margin:20px 0 28px;color:#d9d0c3}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px;border:2px solid var(--yolk)}
+.btn.main{background:var(--yolk);color:#2a2220}
+.btn.main:hover{background:#ffc552}
+.btn.ghost{color:var(--rice)}.btn.ghost:hover{background:rgba(242,177,52,.15)}
+.bowlBox{text-align:center}
+.bowlBox svg{width:100%;max-width:380px;height:auto;display:block;margin:0 auto}
+.t{transform-box:view-box;transform-origin:150px 150px;transform:rotate(var(--a));transition:transform 1.3s cubic-bezier(.6,.05,.2,1),opacity 1.3s}
+.mixed .t{transform:rotate(calc(var(--a) + 260deg)) scale(.42);opacity:.9}
+#gochu{transform-box:view-box;transform-origin:150px 150px;transform:scale(.2);opacity:0;transition:transform 1.3s,opacity 1s}
+.mixed #gochu{transform:scale(1);opacity:.55}
+#yolk{transform-box:view-box;transform-origin:150px 150px;transition:transform 1.3s}
+.mixed #yolk{transform:scale(1.5)}
+#steam{opacity:.5}
+.mixBtn{margin-top:14px;background:transparent;color:var(--rice);border:2px solid var(--rice);border-radius:999px;padding:10px 22px;font:inherit;font-weight:700;cursor:pointer}
+.mixBtn:hover{background:var(--rice);color:var(--pot)}
+.hint{font-size:15px;color:#bfb5a7;margin:8px 0 0}
+
+/* sections */
+section{padding:72px 0}
+h2{font-size:clamp(32px,5vw,52px);margin-bottom:12px}
+.sub{color:var(--muted);max-width:52ch;margin:0 0 36px}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:22px 22px 6px 22px;padding:24px}
+.dish:nth-child(even){border-radius:22px 6px 22px 22px}
+.dish i{display:block;width:44px;height:44px;border-radius:50%;margin-bottom:16px}
+.dish h3{font-size:26px;margin-bottom:8px}
+.dish p{margin:0;color:var(--muted);font-size:16px}
+.tagline{display:inline-block;margin-top:12px;font-size:14px;font-weight:700;color:var(--gochu)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tagline{color:#ff8a7c}}
+:root[data-theme="dark"] .tagline{color:#ff8a7c}
+.proof{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--pot);color:var(--rice);border-radius:28px;padding:40px}
+.score{font-family:var(--display);font-size:clamp(72px,14vw,130px);line-height:.9;color:var(--yolk)}
+.score small{display:block;font-family:var(--body);font-size:16px;color:#d9d0c3;margin-top:8px}
+.proof p{margin:0 0 12px;max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chips span{border:1px solid #6a5d56;border-radius:999px;padding:4px 14px;font-size:15px}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line)}
+.facts li:first-child{padding-top:0}
+.facts b{display:block;font-size:15px;color:var(--muted);font-weight:400}
+.facts a{font-size:20px}
+.note{background:var(--card);border:1px dashed var(--line);border-radius:18px;padding:24px}
+.note h3{font-size:28px;margin-bottom:10px}
+.note p{margin:0 0 18px;color:var(--muted)}
+footer{background:var(--pot);color:#bfb5a7;padding:32px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:760px){
+  .heroGrid,.visit,.proof{grid-template-columns:1fr}
+  .proof{padding:28px}
+  nav div{gap:14px}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){.t,#gochu,#yolk{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="han" aria-hidden="true">비빔밥</div>
+  <div class="wrap">
+    <nav>
+      <b>Cafe 38 &amp; Noori Chicken</b>
+      <div><a href="#menu">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></div>
+    </nav>
+    <div class="heroGrid">
+      <div>
+        <h1>Hot stone pot. Crispy chicken. Cold bingsu.</h1>
+        <p class="lede">Korean comfort food in Orem, cooked to order and served in portions that fit the price.</p>
+        <div class="btns">
+          <a class="btn main" href="https://sushi38.com" target="_blank" rel="noopener">Order online</a>
+          <a class="btn ghost" href="tel:+18016910978">Call (801) 691-0978</a>
+        </div>
+      </div>
+      <div class="bowlBox" id="bowlBox">
+        <svg viewBox="0 0 300 300" role="img" aria-label="Illustration of a bibimbap stone pot with vegetables, egg yolk, and gochujang">
+          <circle cx="150" cy="150" r="144" fill="#14100f"/>
+          <circle cx="150" cy="150" r="132" fill="#4a3d37"/>
+          <circle cx="150" cy="150" r="112" fill="#f6f1e7"/>
+          <g class="t" style="--a:0deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#4f8a3f"/></g>
+          <g class="t" style="--a:60deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#e8872b"/></g>
+          <g class="t" style="--a:120deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#7a4a30"/></g>
+          <g class="t" style="--a:180deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#e9d58a"/></g>
+          <g class="t" style="--a:240deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#c2372b"/></g>
+          <g class="t" style="--a:300deg"><rect x="128" y="58" width="44" height="58" rx="16" fill="#3d6b34"/></g>
+          <circle id="gochu" cx="150" cy="150" r="96" fill="#c2372b"/>
+          <circle cx="150" cy="150" r="30" fill="#fffdf8"/>
+          <circle id="yolk" cx="150" cy="150" r="16" fill="#f2b134"/>
+          <g id="steam" fill="none" stroke="#f6f1e7" stroke-width="3" stroke-linecap="round">
+            <path d="M120 40c-10-10 10-16 0-26"/><path d="M150 36c-10-10 10-16 0-26"/><path d="M180 40c-10-10 10-16 0-26"/>
+          </g>
+        </svg>
+        <button class="mixBtn" id="mixBtn" type="button" aria-pressed="false">Mix it</button>
+        <p class="hint" id="hint" aria-live="polite">Our bibimbap arrives sizzling. Go ahead, stir.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="menu">
+  <div class="wrap">
+    <h2>What to order</h2>
+    <p class="sub">A few favorites diners keep coming back for. See the full menu and order on our website.</p>
+    <div class="menu">
+      <article class="dish"><i style="background:#c2372b"></i><h3>Sizzling Bibimbap</h3><p>Rice, vegetables and egg in a hot stone pot that crisps the bottom as you mix.</p><span class="tagline">Most ordered</span></article>
+      <article class="dish"><i style="background:#e8872b"></i><h3>Korean Fried Chicken</h3><p>Extra crispy, with a choice of sauces. Try the soy garlic or the supreme sauce.</p><span class="tagline">Lunch special available</span></article>
+      <article class="dish"><i style="background:#f2b134"></i><h3>Mango Sunshine Bingsu</h3><p>Finely shaved ice piled with mango. A cold finish to a hot meal.</p><span class="tagline">Popular dessert</span></article>
+      <article class="dish"><i style="background:#4f8a3f"></i><h3>Kimchi Bibimbap</h3><p>The classic bowl with a kimchi kick, for anyone who likes it bold.</p><span class="tagline">Guest favorite</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="proof">
+      <div class="score">4.9<small>260 Google reviews</small></div>
+      <div>
+        <p>Diners describe the food as authentic and generous for the price, and mention friendly staff and quick, kind service.</p>
+        <p>Regulars say the bibimbap is as good as ever, and the fried chicken and fresh bingsu keep earning repeat visits.</p>
+        <div class="chips"><span>Authentic Korean</span><span>Big portions</span><span>Kind service</span><span>Women-owned</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <h2>Come hungry</h2>
+    <p class="sub">Eat in, take it to go, or have it delivered.</p>
+    <div class="visit">
+      <ul class="facts">
+        <li><b>Address</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+38+Noori+Chicken+824+E+800+N+Orem+UT+84097" target="_blank" rel="noopener">824 E 800 N, Orem, UT 84097</a></li>
+        <li><b>Phone</b><a href="tel:+18016910978">(801) 691-0978</a></li>
+        <li><b>Price</b>$10–20 per person</li>
+        <li><b>Ways to eat</b>Dine-in, takeout, no-contact delivery</li>
+      </ul>
+      <div class="note">
+        <h3>Skip the line</h3>
+        <p>Order online for quick pickup. For today's hours, check the listing on Google Maps.</p>
+        <div class="btns">
+          <a class="btn main" href="https://sushi38.com" target="_blank" rel="noopener">Order online</a>
+          <a class="btn ghost" style="color:var(--ink);border-color:var(--gochu)" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+38+Noori+Chicken+824+E+800+N+Orem+UT+84097" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Cafe 38 &amp; Noori Chicken · 824 E 800 N, Orem, Utah</span>
+    <span>맛있게 드세요</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var box=document.getElementById('bowlBox'),btn=document.getElementById('mixBtn'),hint=document.getElementById('hint');
+  btn.addEventListener('click',function(){
+    var on=box.classList.toggle('mixed');
+    btn.textContent=on?'Unmix':'Mix it';
+    btn.setAttribute('aria-pressed',on);
+    hint.textContent=on?'That is how it is meant to be eaten.':'Our bibimbap arrives sizzling. Go ahead, stir.';
+  });
+})();
+</script>
+</body>
+</html>
